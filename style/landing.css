@@ -1,12 +1,412 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./../assets/fonts/iranyekanwebbold.woff") format("woff");
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("./../assets/fonts/iranyekanweblight.woff") format("woff");
+}
+
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("./../assets/fonts/iranyekanwebregular.woff") format("woff");
+}
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
 }
 
 body {
-    background: #000000;
-    width: 1280px;
-    height: 6456px;
+  background: #000000;
+  font-family: iranyekan;
+  color: #ffff;
+}
+
+div {
+  vertical-align: middle;
+}
+
+#header {
+  background-color: #0c0c0c;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited,
+a:active a:hover {
+  color: white;
+}
+
+.logo {
+  margin: 23px 14px 17px 24px;
+}
+
+.logo img {
+  width: 48px;
+  height: 24px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+ul {
+  list-style: none;
+  font-size: 0.8rem;
+}
+
+.order-top,
+.order-bottom {
+  padding: 0 15px;
+}
+
+.order-top .box1 {
+  margin-bottom: 40px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.box1 .remote-control-box {
+  width: 100%;
+}
+
+.box1 .remote-control-box img {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.view .paragraph-title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-dis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.intro-dis .col-one {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro-dis .col-one span {
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.intro-dis .col-one > div > img {
+  width: 100%;
+}
+
+.intro-dis .col-one .text {
+  margin: 14px auto 10px auto;
+}
+
+.delete {
+  text-decoration: line-through #d95c5c 2px;
+}
+
+.intro-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-price .packega-price {
+  background-color: #121212;
+  margin: 31px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 5px;
+  padding: 18px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-flex .title-price {
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.d-flex .btn-red {
+  background-color: #d95c5c;
+  color: #ffff;
+  padding: 2px 15px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.d-flex > span:last-child {
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-white {
+  padding: 12px 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 5px;
+}
+
+.btn-white > img {
+  width: 70px;
+}
+
+.btn-white span {
+  color: #121212;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.box3 .tv-show-box > img {
+  width: 100%;
+}
+
+.box3 {
+  margin: 50px 0 72px 0;
+}
+
+.box3 .paragraph-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: iranyekan;
+  margin-bottom: 16px;
+}
+
+.video-box {
+  margin-bottom: 60px;
+}
+
+.config-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.config-box .config-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 43px;
+  width: 45%;
+  padding: 0 15px;
+}
+
+.config-box .config-col > div > img {
+  width: 100%;
+}
+
+.config-box .config-col .name-config {
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.remote-control {
+  text-align: center;
+}
+
+.remote-control .remote {
+  padding: 0 101px;
+}
+
+.remote-control .remote > img {
+  width: 100%;
+  margin: 43px 0 20px 0;
+}
+
+.remote-description,
+.android-description,
+.tv-description {
+  padding: 0 15px;
+}
+
+.remote-description .title-remote,
+.android-description .title-android,
+.tv-description .title-tv {
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.remote-description .paragraph {
+  margin-bottom: 60px;
+}
+
+.android-description .paragraph {
+  margin-bottom: 40px;
+}
+
+.tv-description .paragraph {
+  margin-bottom: 72px;
+}
+
+.android-tv .android > img {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.android-description .paragraph,
+.remote-description .paragraph,
+.tv-description .paragraph,
+.view .paragraph,
+.box3 .paragraph {
+  color: #aaa;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.tvOnline .tv > img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.question {
+  width: 100%;
+}
+
+.question > h3 {
+  text-align: center;
+  margin: 60px 0 24px 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.accordin {
+  padding: 0 14px;
+  border-radius: 5px;
+  background: #121212;
+}
+
+.accordin-item {
+  border-bottom: 1px solid #37383e;
+  padding-top: 16px;
+}
+
+.accordin-item .panel {
+  padding: 16px 0;
+  transition: all ease 2s;
+}
+
+.accordin-item .panel > p {
+  color: #f2f2f2;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: iranyekan;
+  font-size: 10px !important;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0 5px;
+}
+
+.accordin-item:last-child {
+  border-bottom: none;
+}
+
+.accrodin-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accrodin-header > button {
+  border: none;
+  outline: none;
+  background: none;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #ccc;
+  font-family: iranyekan;
+  width: 90%;
+}
+
+.box-remote > img {
+  width: 100%;
+  margin: 60px 0;
+}
+
+#purchase {
+  margin-bottom: 64px;
 }
