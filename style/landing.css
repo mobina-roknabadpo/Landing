@@ -24,10 +24,15 @@
   direction: rtl;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000000;
   font-family: iranyekan;
   color: #ffff;
+  user-select: none;
 }
 
 div {
@@ -50,12 +55,11 @@ div {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 a:visited,
 a:active a:hover {
-  color: white;
+  color: #fff;
 }
 
 .logo {
@@ -74,7 +78,15 @@ a:active a:hover {
 
 ul {
   list-style: none;
-  font-size: 0.8rem;
+}
+
+ul li a {
+  color: #fff;
+  font-family: iranyekan;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .order-top,
@@ -86,16 +98,20 @@ ul {
   margin-bottom: 40px;
 }
 
-.box1 {
+.order-top .box1 {
   display: flex;
   flex-direction: column;
 }
 
-.box1 .remote-control-box {
+.view {
   width: 100%;
 }
 
-.box1 .remote-control-box img {
+.order-top .box1 .remote-control-box {
+  width: 100%;
+}
+
+.order-top .box1 .remote-control-box img {
   width: 100%;
   margin: 10px auto;
 }
@@ -108,39 +124,50 @@ ul {
   margin-bottom: 16px;
 }
 
-.box2 {
+.order-top .box2,
+.order-bottom .box2 {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.intro-dis {
+.order-top .box2 .intro-dis,
+.order-bottom .box2 .intro-dis {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
+  width: 100%;
 }
 
-.intro-dis .col-one {
+.order-top .box2 .intro-dis .col-one,
+.order-bottom .box2 .intro-dis .col-one {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 50%;
+  padding: 0 2px;
 }
 
-.intro-dis .col-one span {
-  text-align: right;
+.order-top .box2 .intro-dis .col-one span,
+.order-bottom .box2 .intro-dis .col-one span {
+  text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: iranyekan;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 21px;
 }
 
-.intro-dis .col-one > div > img {
+.order-top .box2 .intro-dis .col-one > div > img,
+.order-bottom .box2 .intro-dis .col-one > div > img {
   width: 100%;
 }
 
-.intro-dis .col-one .text {
+.order-top .box2 .intro-dis .col-one .text,
+.order-bottom .box2 .intro-dis .col-one .text {
   margin: 14px auto 10px auto;
 }
 
@@ -148,19 +175,24 @@ ul {
   text-decoration: line-through #d95c5c 2px;
 }
 
-.intro-price {
+.order-top .box2 .intro-price,
+.order-bottom .box2 .intro-price {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-top: 31px;
+  align-items: center;
 }
 
-.intro-price .packega-price {
+.order-top .box2 .intro-price .packega-price,
+.order-bottom .box2 .intro-price .packega-price {
   background-color: #121212;
-  margin: 31px 0 20px 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
   border-radius: 5px;
-  padding: 18px;
+  padding: 19px 18px;
+  width: 100%;
 }
 
 .d-flex {
@@ -176,7 +208,7 @@ ul {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 24px;
 }
 
 .d-flex .btn-red {
@@ -186,6 +218,7 @@ ul {
   border-radius: 3px;
   font-weight: 700;
   font-size: 10px;
+  line-height: 17px;
 }
 
 .d-flex > span:last-child {
@@ -194,7 +227,7 @@ ul {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 21px;
 }
 
 .btn-white {
@@ -203,8 +236,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .btn-white > img {
@@ -250,11 +285,11 @@ ul {
   align-items: center;
   margin-bottom: 43px;
   width: 45%;
-  padding: 0 15px;
 }
 
 .config-box .config-col > div > img {
-  width: 100%;
+  width: 120px;
+  height: 120px;
 }
 
 .config-box .config-col .name-config {
@@ -269,7 +304,9 @@ ul {
 }
 
 .remote-control {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .remote-control .remote {
@@ -312,6 +349,16 @@ ul {
   margin-bottom: 72px;
 }
 
+.android-tv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.android-tv .android {
+  width: 100%;
+}
+
 .android-tv .android > img {
   width: 100%;
   margin-bottom: 12px;
@@ -329,9 +376,19 @@ ul {
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 21px;
 }
 
+.tvOnline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tv-description .paragraph {
+  margin-bottom: 0;
+}
 .tvOnline .tv > img {
   width: 100%;
   margin-bottom: 20px;
@@ -339,11 +396,12 @@ ul {
 
 .question {
   width: 100%;
+  margin-top: 60px;
 }
 
 .question > h3 {
   text-align: center;
-  margin: 60px 0 24px 0;
+  margin-bottom: 24px;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -358,12 +416,15 @@ ul {
 
 .accordin-item {
   border-bottom: 1px solid #37383e;
-  padding-top: 16px;
+}
+
+.accordin-item.isActive .panel {
+  padding-bottom: 16px;
 }
 
 .accordin-item .panel {
-  padding: 16px 0;
   transition: all ease 2s;
+  display: none;
 }
 
 .accordin-item .panel > p {
@@ -374,7 +435,7 @@ ul {
   font-size: 10px !important;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 17px;
   margin: 0 5px;
 }
 
@@ -385,6 +446,7 @@ ul {
 .accrodin-header {
   display: flex;
   justify-content: space-between;
+  padding: 16px 0;
 }
 
 .accrodin-header > button {
@@ -396,7 +458,7 @@ ul {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 21px;
   color: #ccc;
   font-family: iranyekan;
   width: 90%;
@@ -409,4 +471,545 @@ ul {
 
 #purchase {
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 72px;
+}
+
+.detail .title-config {
+  margin-bottom: 24px;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.detail .container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #121212;
+  padding: 20px 14px 28px 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.detail .container .specification {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.detail .container .portal,
+.detail .container .accessories,
+.detail .container .apps {
+  height: 0;
+  transition: height 1s ease-out;
+}
+
+.detail .container .portal.expanded-s,
+.detail .container .accessories.expanded-s,
+.detail .container .apps.expanded-s {
+  height: auto;
+}
+
+.detail .container .portal.expanded-s {
+  margin-top: 24px;
+}
+
+.accessories strong,
+.apps li:nth-of-type(odd) strong {
+  margin-top: 24px;
+}
+
+.detail .container .specification li {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail .container .specification li strong {
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  /* 1920/14 Regular (Text) */
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+
+.detail .container .specification li > span {
+  color: #aaa;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.more-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 14px;
+}
+
+.more-expanded-m{
+  display: none;
+}
+
+.more-info.isOpen {
+  padding-top: 14px;
+}
+
+.more-info > span {
+  color: #6eb8ff;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  /* 14 Bold */
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 639px) and (max-width: 1279px) {
+  .order-top {
+    padding: 0 40px;
+  }
+
+  .order-bottom {
+    padding: 0;
+  }
+
+  .order-top .box2 {
+    flex-direction: row;
+    justify-content: space-around;
+
+    gap: 12px;
+  }
+  .order-top .box2 .intro-dis {
+    width: 33%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .order-top .box2 .intro-dis .col-one {
+    width: 84%;
+  }
+
+  .order-top .box2 .intro-price {
+    width: 66%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .intro-price .packega-price,
+  .btn-white {
+    width: 100%;
+  }
+
+  .box3 {
+    margin: 91px 0 99px 0;
+  }
+
+  .order-top .box1 {
+    margin-bottom: 60px;
+  }
+
+  .order-bottom .box2 {
+    padding: 0 136px;
+  }
+
+  .tv-description,
+  .android-description {
+    padding: 0 136px;
+  }
+
+  .remote-control {
+    flex-direction: row-reverse;
+    padding: 0 40px;
+  }
+
+  .remote-control .remote {
+    padding: 0 19px 0 0;
+    width: 33%;
+  }
+
+  .remote-description {
+    width: 70%;
+  }
+
+  .remote-description .title-remote,
+  .remote-description .paragraph {
+    text-align: right;
+  }
+
+  .config-box .config-col {
+    padding: 0;
+    width: 50%;
+  }
+
+  .config-box .config-col > div > img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .order-bottom .box2 .intro-dis {
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .order-bottom .box2 .intro-dis .col-one {
+    width: 35%;
+  }
+
+  #purchase {
+    margin-bottom: 97px;
+  }
+
+  ul li a {
+    font-size: 12px;
+  }
+
+  .android-description .paragraph,
+  .remote-description .paragraph,
+  .tv-description .paragraph,
+  .view .paragraph,
+  .box3 .paragraph {
+    font-size: 14px;
+  }
+
+  .view .paragraph-title,
+  .box3 .paragraph-title,
+  .remote-description .title-remote,
+  .android-description .title-android,
+  .tv-description .title-tv {
+    font-size: 16px;
+  }
+
+  .accrodin-header > button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .accordin-item .panel > p {
+    font-size: 12px !important;
+    margin: 0;
+  }
+
+  .accordin {
+    padding: 0 40px;
+  }
+
+  .accordin-item .panel {
+    padding: 14px 0 20px 0;
+  }
+
+  .accordin-item .panel {
+    width: 95%;
+  }
+
+  .question > h3 {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .config-box .config-col .name-config {
+    font-size: 14px;
+  }
+
+  .detail .container {
+    padding: 34px 40px 38px 40px;
+    width: 100%;
+  }
+
+  .detail .title-config {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .detail .container .specification {
+    width: 50%;
+  }
+
+  .more-info {
+    padding-top: 38px;
+  }
+
+  .accessories strong,
+  .apps li:nth-of-type(odd) strong {
+    margin-top: 0;
+  }
+
+  .specification .portal,
+  .accessories li:first-child {
+    margin-top: 24px;
+  }
+
+  .detail .container .apps{
+    height: auto;
+  }
+
+  .detail .container .portal.expanded-m,
+  .detail .container .accessories.expanded-m,
+  .detail .container .apps.expanded-m {
+    height: auto;
+  }
+
+  .more-expanded-s{
+    display: none;
+  }
+  .more-expanded-m{
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-container {
+    max-width: 1180px;
+    margin: auto;
+  }
+  #header {
+    height: 80px;
+  }
+
+  .order-top {
+    padding: 0;
+  }
+
+  .order-top .box1 {
+    flex-direction: row-reverse;
+    margin: 31px 0 191px 0;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .order-top .box1 .remote-control-box {
+    width: 50%;
+  }
+
+  .view {
+    width: 33%;
+    margin-right: 50px;
+  }
+
+  .view .paragraph-title,
+  .view .paragraph {
+    text-align: right;
+  }
+
+  .order-top .box2 {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .order-top .box2 .intro-dis {
+    flex-direction: row;
+    width: 40%;
+    gap: 50px;
+  }
+
+  .order-top .box2 .intro-price {
+    width: 33%;
+  }
+
+  .box3 {
+    margin: 100px 0 120px 0;
+    padding: 0 250px;
+  }
+
+  .video-box {
+    padding: 0 150px;
+    margin-bottom: 165px;
+  }
+
+  .config-box {
+    padding: 0 60px;
+    margin-bottom: 136px;
+  }
+
+  .config-box .config-col {
+    width: 25%;
+  }
+
+  .config-box .config-col > div > img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .config-box .config-col .name-config {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .config-box .config-col {
+    margin: 0;
+  }
+
+  .remote-control {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+  .remote-control .remote {
+    width: 30%;
+    padding: 0 0 0 50px;
+  }
+  .remote-description {
+    width: 40%;
+    padding: 0;
+  }
+
+  .view .paragraph-title,
+  .box3 .paragraph-title,
+  .remote-description .title-remote,
+  .android-description .title-android,
+  .tv-description .title-tv {
+    font-size: 20px;
+  }
+
+  .android-description .paragraph,
+  .remote-description .paragraph,
+  .tv-description .paragraph,
+  .view .paragraph,
+  .box3 .paragraph {
+    font-size: 16px;
+  }
+
+  .remote-description .title-remote,
+  .remote-description .paragraph {
+    text-align: right;
+  }
+  ul li a {
+    font-size: 12px;
+  }
+  .remote-control .remote > img {
+    margin: 0;
+  }
+
+  .android-tv {
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+    margin-top: 76px;
+  }
+
+  .android-tv .android {
+    width: 50%;
+  }
+
+  .android-description {
+    width: 40%;
+  }
+
+  .android-description .title-android,
+  .android-description .paragraph {
+    text-align: right;
+  }
+
+  .question {
+    max-width: 780px;
+    margin: 120px auto;
+  }
+
+  .question > h3 {
+    font-size: 20px;
+  }
+
+  .tvOnline .tv {
+    padding: 0 136px;
+    width: 100%;
+  }
+  .tv-description {
+    padding: 0;
+    position: absolute;
+    bottom: 4%;
+    width: 50%;
+  }
+
+  .accrodin-header > button {
+    font-size: 16px;
+    width: 100%;
+  }
+  .accordin-item .panel > p {
+    font-size: 14px !important;
+    margin: 0;
+  }
+  #purchase {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 45px;
+    margin-top: 154px;
+  }
+
+  .box-remote {
+    width: 30%;
+  }
+
+  .order-bottom {
+    width: 35%;
+    padding: 0 45px 0 0;
+  }
+  .detail {
+    margin-top: 120px;
+    padding: 0 50px;
+  }
+  .detail .title-config {
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 40px;
+  }
+
+  .detail .container {
+    align-items: start;
+    padding: 40px 0 38px 0;
+    width: 100%;
+  }
+
+  .detail .container .specification {
+    width: 25%;
+    height: 360px;
+    border-left: 1px solid #37383e;
+    padding-right: 20px;
+    padding-left: 4px;
+  }
+
+  .accessories strong,
+  .apps li:nth-of-type(odd) strong,
+  .portal {
+    margin-top: 0;
+  }
+
+  .detail .container .specification:nth-of-type(4) {
+    border: 0;
+  }
+
+  .detail .container .specification div:first-child {
+    margin: 0;
+  }
+
+  .more-info {
+    padding-right: 28px;
+  }
+  .more-expanded-s{
+    display: none;
+  }
+  .more-expanded-m{
+    display: none;
+  }
 }

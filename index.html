@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="style/landing.css" />
   </head>
   <body>
+    <header id="header">
+      <nav id="navigation">
+        <a class="logo" href="https://www.namava.ir">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </a>
+        <ul class="menu">
+          <li class="menu-item"><a href="#intro">معرفی</a></li>
+          <li class="menu-item"><a href="#config">مشخصات فنی</a></li>
+          <li class="menu-item"><a href="#purchase">خرید</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="main-container">
-      <header id="header">
-        <nav id="navigation">
-          <a class="logo" href="https://www.namava.ir">
-            <img src="./assets/images/logo.png" alt="logo" />
-          </a>
-          <ul class="menu">
-            <li class="menu-item"><a href="#intro">معرفی</a></li>
-            <li class="menu-item"><a href="#config">مشخصات فنی</a></li>
-            <li class="menu-item"><a href="#purchase">خرید</a></li>
-          </ul>
-        </nav>
-      </header>
       <main>
         <section class="intro">
           <div class="order-top">
@@ -147,7 +148,7 @@
             </div>
             <div class="android-tv">
               <div class="android">
-                <img src="./assets/images/androidTv.png" alt="" />
+                <img src="./assets/images/nmv-music.png" alt="" />
               </div>
               <div class="android-description">
                 <h3 class="title-android">سیستم عامل رسمی Android TV نسخه 9</h3>
@@ -163,9 +164,7 @@
                 <img src="./assets/images/tvOnline.png" alt="" />
               </div>
               <div class="tv-description">
-                <h3 class="title-tv">
-                  تماشای آنلاین هزاران فیلم و سریال در صفحه تلویزیون شما
-                </h3>
+                <h3 class="title-tv">تماشای آنلاین هزاران ساعت فیلم و سریال</h3>
                 <p class="paragraph">
                   با کمک دستگاه نماوا تی وی، دستگاه تلویزیون خود را هوشمند کنید
                   و در کنار خانواده به تماشای هزاران فیلم و سریال در نماوا
@@ -175,112 +174,89 @@
             </div>
           </div>
         </section>
-        <!-- <section id="config">
-            <div class="detail">
-                <div class="title-config">
-                    <h3>مشخصات فنی</h3>
-                </div>
-                <div class="board-config-list">
-                    <div class="config-item">
-                        <div class="title">
-                            <h2>رم</h2>
-                        </div>
-                        <div class="items">
-                            <span>
-                                2گیگابایت
-                            </span>
-                        </div>
-                    </div>
-                    <div class="config-item">
-                        <div class="title">
-                            <h2>حافظه داخلی</h2>
-                        </div>
-                        <div class="items">
-                            <span>
-                                16 گیگابایت
-                            </span>
-                        </div>
-                    </div>
-                    <div class="config-item">
-                        <div class="title">
-                            <h2>پردازنده</h2>
-                        </div>
-                        <div class="items">
-                            <span>
-                                چهارهسته ای ARM
-                            </span>
-                        </div>
-                    </div>
-                    <div class="config-item">
-                        <div class="title">
-                            <h2>سیستم عامل</h2>
-                        </div>
-                        <div class="items">
-                            <span>
-                                Android Tv Version 9
-                            </span>
-                        </div>
-                    </div>
-                    div
-                </div>
-                <div class="network-config-list">
-                    <div class="config-item">
-                        <h2>شبکه</h2>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                    <div class="config-item">
-                        <h2>وضوح تصویر</h2>
-                        <div>
-                            <div></div>
-                        </div>
-                       
-                    </div>
-                    <div class="config-item">
-                        <h2>
-                            درگاه های ارتباطی
-                        </h2>
-                        <div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="config-program-list">
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="config-item">
-                        <h2>برنامه</h2>
-                        <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="phone-config-list">
-                    <div class="config-item">
-                        <h2>اقلام همراه</h2>
-                        <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
+        <section id="config">
+          <div class="detail">
+            <div class="title-config">
+              <h3>مشخصات دستگاه</h3>
             </div>
-        </section> -->
+            <div class="container">
+              <ul class="specification config">
+                <li>
+                  <strong>رم</strong>
+                  <span> گیگابایت ۲ </span>
+                </li>
+                <li>
+                  <strong>حافظه داخلی</strong>
+                  <span> ۱۶ گیگابایت</span>
+                </li>
+                <li>
+                  <strong>پردازنده</strong>
+                  <span>چهار هسته ای ARM</span>
+                </li>
+                <li>
+                  <strong>سیستم عامل</strong>
+                  <span>Android Tv version 9</span>
+                </li>
+              </ul>
+              <ul class="specification apps">
+                <li>
+                  <strong>شبکه</strong>
+                  <span>- Wireless: Wi-Fi 802.11 a/b/g/n/ac</span>
+                  <span>dual band</span>
+                  <span>Ethernet: Wired LAN</span>
+                </li>
+                <li>
+                  <strong>وضوح تصویر</strong>
+                  <span>4K (Ultra-HD)@60fps</span>
+                </li>
+                <li>
+                  <strong>درگاه های ارتباطی</strong>
+                  <span>USB 3.0</span>
+                  <span>USB 2.0</span>
+                </li>
+              </ul>
+              <ul class="specification accessories">
+                <li>
+                  <span>Micro SD/TF</span>
+
+                  <span>AV</span>
+
+                  <span>HDMI</span>
+
+                  <span>LAN</span>
+
+                  <span>SPDIF (Optical Sound Output)</span>
+                </li>
+                <li>
+                  <strong>برنامه ها</strong>
+                  <span>نسخه اختصاصی نماوا</span>
+                  <span>Google play for Android TV</span>
+                  <span>اپلیکیشن های کاربردی مخصوص تلویزیون</span>
+                </li>
+              </ul>
+              <ul class="specification portal">
+                <li>
+                  <strong>اقلام همراه</strong>
+                  <span>نماوا تی‌وی</span>
+                  <span>ریموت هوشمند وایرلس همراه میکروفون داخلی</span>
+                  <span>دانگل وایرلس</span>
+                  <span>آداپتور</span>
+                  <span>کابل hdmi</span>
+                  <span>کارت گارانتی</span>
+                  <span>دفترچه راهنما</span>
+                </li>
+              </ul>
+              <div class="more-info more-expanded-s">
+                <span>اطلاعات بیشتر</span>
+                <img src="./assets/images/Down.png" alt="down" />
+              </div>
+              <div class="more-info more-expanded-m">
+                <span>اطلاعات بیشتر</span>
+                <img src="./assets/images/Down.png" alt="down" />
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="question">
           <h3>سوالات متداول</h3>
           <div class="accordin">
@@ -512,4 +488,5 @@
       </main>
     </div>
   </body>
+  <script src="./script/app.js"></script>
 </html>
