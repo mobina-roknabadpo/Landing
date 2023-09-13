@@ -8,13 +8,14 @@ const image = document.querySelector(".more-info > img");
 accordinContent.forEach((item, index) => {
   let panel = item.querySelector(".panel");
   let svg = item.getElementsByTagName("svg")[0];
-  item.addEventListener("click", () => {
-    item.classList.toggle("isActive");
-    if (item.classList.contains("isActive")) {
-      panel.style.display = "block";
+  const header = item.querySelector(".accrodin-header");
+  header.addEventListener("click", () => {
+    header.classList.toggle("isActive");
+    if (header.classList.contains("isActive")) {
+      panel.style.height = `${panel.scrollHeight}px`;
       svg.style.transform = "rotate(180deg)";
     } else {
-      panel.style.display = "none";
+      panel.style.height = 0;
       svg.style.transform = "rotate(0)";
     }
     removeIsActiveClasses(index);
@@ -26,10 +27,11 @@ function removeIsActiveClasses(index) {
   accordinContent.forEach((item, index1) => {
     if (index !== index1) {
       console.log(index, index !== index1);
-      item.classList.remove("isActive");
+      const header = item.querySelector(".accrodin-header");
+      header.classList.remove("isActive");
       let panel = item.querySelector(".panel");
       let svg = item.getElementsByTagName("svg")[0];
-      panel.style.display = "none";
+      panel.style.height = 0;
       svg.style.transform = "rotate(0)";
     }
   });

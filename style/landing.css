@@ -242,7 +242,7 @@ ul li a {
   margin-top: 20px;
 }
 
-.btn-white > a>img {
+.btn-white > a > img {
   width: 70px;
   padding-top: 8px;
 }
@@ -426,7 +426,10 @@ ul li a {
 }
 
 .accordin-item .panel {
-  display: none;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-out;
 }
 
 .accordin-item .panel > p {
@@ -439,6 +442,7 @@ ul li a {
   font-weight: 300;
   line-height: 17px;
   margin: 0 5px;
+  padding-bottom: 16px;
 }
 
 .accordin-item:last-child {
@@ -448,7 +452,11 @@ ul li a {
 .accrodin-header {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 14px 0;
+}
+
+.accrodin-header.isActive {
+  padding: 18px 0;
 }
 
 .accrodin-header > button {
@@ -527,6 +535,7 @@ ul li a {
 .detail .container .portal.expanded-s,
 .detail .container .accessories.expanded-s,
 .detail .container .apps.expanded-s {
+  height: 340px;
   max-height: 400px;
 }
 
@@ -775,7 +784,7 @@ ul li a {
   }
 
   .detail .container .apps {
-    height: auto;
+    max-height: 400px;
   }
 
   .detail .container .accessories li span:last-child {
@@ -785,7 +794,7 @@ ul li a {
   .detail .container .portal.expanded-m,
   .detail .container .accessories.expanded-m,
   .detail .container .apps.expanded-m {
-    height: auto;
+    max-height: 400px;
   }
 
   .more-expanded-s {
@@ -999,6 +1008,7 @@ ul li a {
   .detail .container .specification {
     width: 25%;
     height: 360px;
+    max-height: 400px;
     border-left: 1px solid #37383e;
     padding-right: 20px;
     padding-left: 4px;
