@@ -242,8 +242,9 @@ ul li a {
   margin-top: 20px;
 }
 
-.btn-white > img {
+.btn-white > a>img {
   width: 70px;
+  padding-top: 8px;
 }
 
 .btn-white span {
@@ -416,6 +417,8 @@ ul li a {
 
 .accordin-item {
   border-bottom: 1px solid #37383e;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .accordin-item.isActive .panel {
@@ -423,7 +426,6 @@ ul li a {
 }
 
 .accordin-item .panel {
-  transition: all ease 2s;
   display: none;
 }
 
@@ -514,14 +516,18 @@ ul li a {
 .detail .container .portal,
 .detail .container .accessories,
 .detail .container .apps {
-  height: 0;
-  transition: height 1s ease-out;
+  max-height: 0;
+  transition: max-height 1s ease-out;
+}
+
+.detail .container .portal {
+  margin-top: 24px;
 }
 
 .detail .container .portal.expanded-s,
 .detail .container .accessories.expanded-s,
 .detail .container .apps.expanded-s {
-  height: auto;
+  max-height: 400px;
 }
 
 .detail .container .portal.expanded-s {
@@ -567,9 +573,10 @@ ul li a {
   align-items: center;
   justify-content: center;
   padding-top: 14px;
+  cursor: pointer;
 }
 
-.more-expanded-m{
+.more-expanded-m {
   display: none;
 }
 
@@ -718,12 +725,16 @@ ul li a {
     padding: 0 40px;
   }
 
-  .accordin-item .panel {
+  /* .accordin-item .panel {
     padding: 14px 0 20px 0;
-  }
+  } */
 
   .accordin-item .panel {
     width: 95%;
+  }
+
+  .question {
+    margin-top: 72px;
   }
 
   .question > h3 {
@@ -750,7 +761,7 @@ ul li a {
   }
 
   .more-info {
-    padding-top: 38px;
+    padding-top: 0;
   }
 
   .accessories strong,
@@ -763,8 +774,12 @@ ul li a {
     margin-top: 24px;
   }
 
-  .detail .container .apps{
+  .detail .container .apps {
     height: auto;
+  }
+
+  .detail .container .accessories li span:last-child {
+    margin-bottom: 38px;
   }
 
   .detail .container .portal.expanded-m,
@@ -773,10 +788,10 @@ ul li a {
     height: auto;
   }
 
-  .more-expanded-s{
+  .more-expanded-s {
     display: none;
   }
-  .more-expanded-m{
+  .more-expanded-m {
     display: flex;
   }
 }
@@ -1006,10 +1021,10 @@ ul li a {
   .more-info {
     padding-right: 28px;
   }
-  .more-expanded-s{
+  .more-expanded-s {
     display: none;
   }
-  .more-expanded-m{
+  .more-expanded-m {
     display: none;
   }
 }
