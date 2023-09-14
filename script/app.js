@@ -42,7 +42,7 @@ const moreInfo = document.querySelectorAll(".more-info");
 moreInfo.forEach((item) => {
   if (item.classList.contains("more-expanded-s")) {
     item.addEventListener("click", () => resizable(item, "expanded-s"));
-  } else {
+  } else if (item.classList.contains("more-expanded-m")) {
     item.addEventListener("click", () => resizable(item, "expanded-m"));
   }
 });
