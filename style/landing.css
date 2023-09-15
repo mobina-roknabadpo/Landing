@@ -86,7 +86,7 @@ ul li a {
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 17px;
 }
 
 .order-top,
@@ -122,6 +122,7 @@ ul li a {
   font-size: 14px;
   text-align: center;
   margin-bottom: 16px;
+  line-height: 24px;
 }
 
 .order-top .box2,
@@ -168,7 +169,7 @@ ul li a {
 
 .order-top .box2 .intro-dis .col-one .text,
 .order-bottom .box2 .intro-dis .col-one .text {
-  margin: 14px auto 10px auto;
+  margin: 14px auto 20px auto;
 }
 
 .delete {
@@ -268,6 +269,7 @@ ul li a {
   font-weight: 700;
   font-family: iranyekan;
   margin-bottom: 16px;
+  line-height: 24px;
 }
 
 .video-box {
@@ -334,7 +336,7 @@ ul li a {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 24px;
   margin-bottom: 16px;
 }
 
@@ -565,7 +567,7 @@ ul li a {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .detail .container .specification li > span {
@@ -577,7 +579,7 @@ ul li a {
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .more-info {
@@ -718,6 +720,7 @@ ul li a {
   .view .paragraph,
   .box3 .paragraph {
     font-size: 14px;
+    line-height: 24px;
   }
 
   .view .paragraph-title,
@@ -726,16 +729,19 @@ ul li a {
   .android-description .title-android,
   .tv-description .title-tv {
     font-size: 16px;
+    line-height: 28px;
   }
 
   .accrodin-header > button {
     font-size: 14px;
     width: 100%;
+    line-height: 24px;
   }
 
   .accordin-item .panel > p {
     font-size: 12px !important;
     margin: 0;
+    line-height: 21px;
   }
 
   .accordin {
@@ -810,6 +816,14 @@ ul li a {
   }
   .more-expanded-m {
     display: flex;
+  }
+
+  .logo {
+    margin: 23px 56px 17px 24px;
+  }
+  .order-top .box2 .intro-dis .col-one .text,
+  .order-bottom .box2 .intro-dis .col-one .text {
+    margin: 14px auto 10px auto;
   }
 }
 
@@ -913,6 +927,8 @@ ul li a {
   .android-description .title-android,
   .tv-description .title-tv {
     font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 24px;
   }
 
   .android-description .paragraph,
@@ -921,6 +937,7 @@ ul li a {
   .view .paragraph,
   .box3 .paragraph {
     font-size: 16px;
+    line-height: 28px;
   }
 
   .remote-description .title-remote,
@@ -929,6 +946,7 @@ ul li a {
   }
   ul li a {
     font-size: 12px;
+    line-height: 21px;
   }
   .remote-control .remote > img {
     margin: 0;
@@ -977,10 +995,12 @@ ul li a {
   .accrodin-header > button {
     font-size: 16px;
     width: 100%;
+    line-height: 28px;
   }
   .accordin-item .panel > p {
     font-size: 14px !important;
     margin: 0;
+    line-height: 24px;
   }
   #purchase {
     flex-direction: row-reverse;
@@ -1045,5 +1065,15 @@ ul li a {
   }
   .more-expanded-m {
     display: none;
+  }
+  .detail .container .portal {
+    margin-top: 0;
+  }
+  .logo {
+    margin: 23px 56px 17px 24px;
+  }
+  .order-top .box2 .intro-dis .col-one span,
+  .order-bottom .box2 .intro-dis .col-one span {
+    line-height: 24px;
   }
 }
