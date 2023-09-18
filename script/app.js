@@ -2,8 +2,9 @@ const accordinContent = document.querySelectorAll(".accordin-item");
 const portal = document.querySelector(".portal");
 const apps = document.querySelector(".apps");
 const accessories = document.querySelector(".accessories");
-const image = document.querySelector(".more-info > img");
-
+const imgExpandedS = document.getElementById("img-expanded-s");
+const imgExpandedM = document.getElementById("img-expanded-m");
+console.log("expanded-s", imgExpandedS, "expanded-m", imgExpandedM);
 //accordin
 accordinContent.forEach((item, index) => {
   let panel = item.querySelector(".panel");
@@ -41,24 +42,28 @@ const moreInfo = document.querySelectorAll(".more-info");
 
 moreInfo.forEach((item) => {
   if (item.classList.contains("more-expanded-s")) {
-    item.addEventListener("click", () => resizable(item, "expanded-s"));
+    item.addEventListener("click", () =>
+      resizable(item, "expanded-s", imgExpandedS)
+    );
   } else if (item.classList.contains("more-expanded-m")) {
-    item.addEventListener("click", () => resizable(item, "expanded-m"));
+    item.addEventListener("click", () =>
+      resizable(item, "expanded-m", imgExpandedM)
+    );
   }
 });
 
-function resizable(item, name) {
-  console.log(item, name);
+function resizable(item, name, down) {
+  console.log(item, name, down);
   item.classList.toggle("isOpen");
   if (item.classList.contains("isOpen")) {
     apps.classList.add(name);
     accessories.classList.add(name);
     portal.classList.add(name);
-    image.style.transform = "rotate(180deg)";
+    down.style.transform = "rotate(180deg)";
   } else {
     apps.classList.remove(name);
     accessories.classList.remove(name);
     portal.classList.remove(name);
-    image.style.transform = "rotate(0)";
+    down.style.transform = "rotate(0)";
   }
 }
