@@ -86,7 +86,7 @@ ul li a {
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 17px;
 }
 
 .order-top,
@@ -122,6 +122,7 @@ ul li a {
   font-size: 14px;
   text-align: center;
   margin-bottom: 16px;
+  line-height: 24px;
 }
 
 .order-top .box2,
@@ -168,7 +169,7 @@ ul li a {
 
 .order-top .box2 .intro-dis .col-one .text,
 .order-bottom .box2 .intro-dis .col-one .text {
-  margin: 14px auto 10px auto;
+  margin: 14px auto 20px auto;
 }
 
 .delete {
@@ -242,8 +243,9 @@ ul li a {
   margin-top: 20px;
 }
 
-.btn-white > img {
+.btn-white > a > img {
   width: 70px;
+  padding-top: 8px;
 }
 
 .btn-white span {
@@ -267,6 +269,7 @@ ul li a {
   font-weight: 700;
   font-family: iranyekan;
   margin-bottom: 16px;
+  line-height: 24px;
 }
 
 .video-box {
@@ -311,11 +314,11 @@ ul li a {
 
 .remote-control .remote {
   padding: 0 101px;
+  margin: 83px 0 40px 0;
 }
 
 .remote-control .remote > img {
   width: 100%;
-  margin: 43px 0 20px 0;
 }
 
 .remote-description,
@@ -333,7 +336,7 @@ ul li a {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 24px;
   margin-bottom: 16px;
 }
 
@@ -416,6 +419,8 @@ ul li a {
 
 .accordin-item {
   border-bottom: 1px solid #37383e;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .accordin-item.isActive .panel {
@@ -423,8 +428,10 @@ ul li a {
 }
 
 .accordin-item .panel {
-  transition: all ease 2s;
-  display: none;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.5s ease-out;
 }
 
 .accordin-item .panel > p {
@@ -437,6 +444,7 @@ ul li a {
   font-weight: 300;
   line-height: 17px;
   margin: 0 5px;
+  padding-bottom: 16px;
 }
 
 .accordin-item:last-child {
@@ -446,7 +454,11 @@ ul li a {
 .accrodin-header {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 14px 0;
+}
+
+.accrodin-header.isActive {
+  padding: 18px 0;
 }
 
 .accrodin-header > button {
@@ -464,9 +476,12 @@ ul li a {
   width: 90%;
 }
 
+.box-remote {
+  margin: 60px 0;
+}
+
 .box-remote > img {
   width: 100%;
-  margin: 60px 0;
 }
 
 #purchase {
@@ -514,14 +529,19 @@ ul li a {
 .detail .container .portal,
 .detail .container .accessories,
 .detail .container .apps {
-  height: 0;
-  transition: height 1s ease-out;
+  max-height: 0;
+  transition: max-height 1s ease-out;
+}
+
+.detail .container .portal {
+  margin-top: 24px;
 }
 
 .detail .container .portal.expanded-s,
 .detail .container .accessories.expanded-s,
 .detail .container .apps.expanded-s {
-  height: auto;
+  height: 340px;
+  max-height: 400px;
 }
 
 .detail .container .portal.expanded-s {
@@ -547,7 +567,7 @@ ul li a {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .detail .container .specification li > span {
@@ -559,7 +579,7 @@ ul li a {
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .more-info {
@@ -567,9 +587,10 @@ ul li a {
   align-items: center;
   justify-content: center;
   padding-top: 14px;
+  cursor: pointer;
 }
 
-.more-expanded-m{
+.more-expanded-m {
   display: none;
 }
 
@@ -684,6 +705,11 @@ ul li a {
     margin-bottom: 97px;
   }
 
+  .box-remote {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+
   ul li a {
     font-size: 12px;
   }
@@ -694,6 +720,7 @@ ul li a {
   .view .paragraph,
   .box3 .paragraph {
     font-size: 14px;
+    line-height: 24px;
   }
 
   .view .paragraph-title,
@@ -702,28 +729,35 @@ ul li a {
   .android-description .title-android,
   .tv-description .title-tv {
     font-size: 16px;
+    line-height: 28px;
   }
 
   .accrodin-header > button {
     font-size: 14px;
     width: 100%;
+    line-height: 24px;
   }
 
   .accordin-item .panel > p {
     font-size: 12px !important;
     margin: 0;
+    line-height: 21px;
   }
 
   .accordin {
     padding: 0 40px;
   }
 
-  .accordin-item .panel {
+  /* .accordin-item .panel {
     padding: 14px 0 20px 0;
-  }
+  } */
 
   .accordin-item .panel {
     width: 95%;
+  }
+
+  .question {
+    margin-top: 72px;
   }
 
   .question > h3 {
@@ -750,7 +784,7 @@ ul li a {
   }
 
   .more-info {
-    padding-top: 38px;
+    padding-top: 0;
   }
 
   .accessories strong,
@@ -763,21 +797,33 @@ ul li a {
     margin-top: 24px;
   }
 
-  .detail .container .apps{
-    height: auto;
+  .detail .container .apps {
+    max-height: 400px;
+  }
+
+  .detail .container .accessories li span:last-child {
+    margin-bottom: 38px;
   }
 
   .detail .container .portal.expanded-m,
   .detail .container .accessories.expanded-m,
   .detail .container .apps.expanded-m {
-    height: auto;
+    max-height: 400px;
   }
 
-  .more-expanded-s{
+  .more-expanded-s {
     display: none;
   }
-  .more-expanded-m{
+  .more-expanded-m {
     display: flex;
+  }
+
+  .logo {
+    margin: 23px 56px 17px 24px;
+  }
+  .order-top .box2 .intro-dis .col-one .text,
+  .order-bottom .box2 .intro-dis .col-one .text {
+    margin: 14px auto 10px auto;
   }
 }
 
@@ -881,6 +927,8 @@ ul li a {
   .android-description .title-android,
   .tv-description .title-tv {
     font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 24px;
   }
 
   .android-description .paragraph,
@@ -889,6 +937,7 @@ ul li a {
   .view .paragraph,
   .box3 .paragraph {
     font-size: 16px;
+    line-height: 28px;
   }
 
   .remote-description .title-remote,
@@ -897,6 +946,7 @@ ul li a {
   }
   ul li a {
     font-size: 12px;
+    line-height: 21px;
   }
   .remote-control .remote > img {
     margin: 0;
@@ -945,16 +995,19 @@ ul li a {
   .accrodin-header > button {
     font-size: 16px;
     width: 100%;
+    line-height: 28px;
   }
   .accordin-item .panel > p {
     font-size: 14px !important;
     margin: 0;
+    line-height: 24px;
   }
   #purchase {
     flex-direction: row-reverse;
     justify-content: space-evenly;
     gap: 45px;
     margin-top: 154px;
+    margin-bottom: 176px;
   }
 
   .box-remote {
@@ -984,6 +1037,7 @@ ul li a {
   .detail .container .specification {
     width: 25%;
     height: 360px;
+    max-height: 400px;
     border-left: 1px solid #37383e;
     padding-right: 20px;
     padding-left: 4px;
@@ -1006,10 +1060,20 @@ ul li a {
   .more-info {
     padding-right: 28px;
   }
-  .more-expanded-s{
+  .more-expanded-s {
     display: none;
   }
-  .more-expanded-m{
+  .more-expanded-m {
     display: none;
+  }
+  .detail .container .portal {
+    margin-top: 0;
+  }
+  .logo {
+    margin: 23px 56px 17px 24px;
+  }
+  .order-top .box2 .intro-dis .col-one span,
+  .order-bottom .box2 .intro-dis .col-one span {
+    line-height: 24px;
   }
 }
